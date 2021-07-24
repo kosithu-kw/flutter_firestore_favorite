@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "861644272415",
+    "project_id": "books-fdda4",
+    "storage_bucket": "books-fdda4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861644272415:android:52507bb79c1cac6825f62a",
+        "android_client_info": {
+          "package_name": "com.goldenmawlamyine.books"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861644272415-8p9ad1sm24t6vlv6sea4fgc65s4lel5k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goldenmawlamyine.books",
+            "certificate_hash": "e4df9c8366d7ff6d5f3e3b7c8f874fbd8a8bf191"
+          }
+        },
+        {
+          "client_id": "861644272415-7tfqe0fn88oub980ppjoh5e9kc7a1gqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHMlZpM7UeNvSQO1z9VtKDBVYHH_9Aouo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861644272415-7tfqe0fn88oub980ppjoh5e9kc7a1gqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
