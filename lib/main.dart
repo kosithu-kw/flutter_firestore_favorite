@@ -9,6 +9,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 
@@ -38,27 +39,34 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   FirebaseFirestore firestore=FirebaseFirestore.instance;
 
+  _checkLogin()async{
+    final AccessToken accessToken = await FacebookAuth.instance.accessToken;
+    final userData = await FacebookAuth.instance.getUserData();
+// or FacebookAuth.i.getUserData()
 
+
+// or FacebookAuth.i.accessToken
+    if (accessToken != null) {
+      // user is logged
+      setState(() {
+        user=userData['id'];
+        isLogin=true;
+      });
+
+    }
+  }
 
   @override
   void initState() {
     // TODO: implement initState
-
+    _checkLogin();
     Timer(Duration(seconds: 2),(){
-      print(isLogin);
+     // print(isLogin);
     });
-  _getCurrentUser();
+
     super.initState();
   }
-  _getCurrentUser(){
-    var cUser=FirebaseAuth.instance.currentUser;
-    if(cUser != null){
-      setState(() {
-        user=cUser.email;
-        isLogin=true;
-      });
-    }
-  }
+
   bool isLogin=false;
 
   String user="";
